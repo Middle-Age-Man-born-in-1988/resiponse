@@ -1,0 +1,1313 @@
+@charset "utf-8";
+
+body,h1,h2,h3,h4,p,ul,ol,form,fieldset,figure{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #f5f5f5;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+/*	font-size: 0.16rem;*/
+}
+ul,ol {
+	list-style: outside none none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+}
+div,figcaption,figure,input,button{
+	box-sizing: border-box;
+}
+.clearfix:after{
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.none {
+	display: none;
+}
+#header{
+	width: 100%;
+	height: 70px;
+	background-color: #333;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+	position: fixed;
+	z-index: 111;
+	top: 0;
+}
+#header .header-centre{
+	max-width: 1263px;
+	height: 70px;
+	margin: 0 auto; 
+}
+#header .header-logo{
+	width: 30%;
+	height: 70px;
+	background: url(../img/logo.png) no-repeat ;
+	text-indent: -12339px;
+	float:left;
+}
+#header .header-link{
+	width: 70%;
+	float: right;
+	height: 70px;
+	line-height: 70px;
+	color: #eee;
+}
+#header .header-link li{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#header .header-link a{
+	color: #eee;
+	display: block;
+	font-size: 16px;
+}
+#header .header-link a:hover ,
+#header .active > a {
+	background-color: #000;
+}
+/*以上是所有header部分的样式*/
+#search{
+	max-width: 1920px;
+	margin: 0 auto;
+	padding-top: 70px;
+	position: relative;
+}
+#search .search-centre{
+	width: 35%;
+	height: 60px;
+	background-color: #079;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -10px 0 0 -17.5%;
+	opacity: 0.5;
+	border-radius:15px;
+}
+#search .copy{
+	opacity: 1;
+	background-color: transparent;
+	padding: 3px 3px 0 3px;
+}
+#search .search-search{
+	width: 70%;
+	height: 54px;
+	background-color: #eee;
+/*	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -28px 0 0 -296px;*/
+	border-radius:15px;
+	color:#666;
+	border: 1px solid #079;
+
+	font-size: 24px;
+	padding:0 10px;
+	outline: none;
+	display: block;
+	float: left;
+
+}
+#search .search-button{
+	width: 30%;
+	height: 54px;
+	background-color: #eee;
+/*	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -27px 0 0 175px;*/
+	border-radius:15px;
+	color:#666;
+	border: 1px solid #079;
+	font-size: 24px;
+	font-weight: bold;
+	outline: none;
+	cursor: pointer;
+	display: block;
+	float: right;
+	border-left: 4px solid #079;
+}
+/*以上是所有search部分的样式*/
+#tour{
+	max-width: 1263px;
+	/*height: 1150px;*/
+	margin: 30px auto;
+	text-align: center;
+}
+#tour .tour-centre h2{
+	font-size:45px;
+	letter-spacing: 2px;
+	color: #666;
+	margin: 10px;
+}
+#tour .tour-centre p{
+	color: #666;
+	margin: 10px;
+	font-size: 16px;
+}
+#tour .tour-figure{
+	border: 1px solid #eee;
+	display: block;
+	padding: 4px;
+	border-radius:4px;
+	margin: 0.9% 0.4%;
+	width: 32.4%;
+	text-align: left;
+	position: relative;
+	float: left;
+}
+#tour .function{
+	height: 40px;
+	overflow: hidden;
+}
+#tour .tour-figure img{
+	vertical-align: top; /*图片底部的空隙实际上涉及行内元素的布局模型，图片默认的垂直对齐方式是基线，而基线的位置是与字体相关的。所以在某些时候，图片底部的空隙可能是 2px，而有时可能是 4px 或更多。不同的 font-size 应该也会影响到这个空隙的大小。top\bottom\middle随便设置即可，区别在于不同浏览器适配*/
+	border-radius: 4px;
+}
+#tour .tour-figure figcaption{
+	color: #777;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	font-size:14px;
+	padding:7px 0 5px 0;
+}
+#tour .tour-info{
+	padding: 5px 0 0 0;
+}
+#tour .tour-title{
+	color: #333;
+	font-weight: normal;
+}
+#tour .tour-sat{
+	float: right;
+	font-size:13px;
+	color: #999;
+	font-style: normal;
+	position: relative;
+	top: 5px;
+	right: 5px;
+}
+#tour .tour-price{
+	color: #f60;
+	font-size:14px;
+}
+#tour .tour-price strong{
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+#tour .tour-type{
+	width: 90px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+	background-color: #59b200;
+	color: #fff;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	border-bottom-right-radius: 4px;
+	border-top-left-radius: 4px;
+}
+/*以上是所有tour部分的样式*/
+#hline{
+	max-width: 1920px;
+	padding: 70px 0 0 0;
+	margin: 0 auto;
+	position: relative;
+}
+/*#hline .hline-centre{
+	width: 1263px;
+	height: 300px;
+	margin: 0 auto;
+}*/
+#hline hgroup{
+	/*padding: 100px 0 0 50px;*/
+	position: absolute;
+	top: 45%;
+	left: 18%;
+}
+#hline h2{
+	color: #eee;
+    font-size: 45px;
+    /*font-weight: middle;*/
+    letter-spacing: 1px;
+}
+#hline h3{
+	color: #eee;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+/*以上是hline的表单样式*/
+#container{
+	max-width: 1263px;
+	margin: 30px auto;
+}
+#container .con-sidebar{
+	width: 28%;
+	float: right;
+	background-color: #fff;
+}
+/*以上是container con-sidebar的表单样式*/
+#container .con-sidebox{
+	border: 1px solid #eee;
+	margin: 0 0 10px 0;
+	text-align: center;
+}
+#container .con-sidebox h2{
+	font-size:20px;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-indent: 8px;
+	height: 40px;
+	line-height: 40px;
+	background-color: #fafafa;
+	color: #666;
+	text-align: left;
+}
+/*以上是container con-sidebar con-sidebox的表单样式*/
+
+#container .con-tag{
+	margin: 10px 0;
+}
+#container .con-tag li{
+	display: inline-block;
+	width: 100px;
+	height: 35px;
+	line-height: 35px;
+	margin: 2px 0;
+	background-color: #eee;
+	color: #888;
+	text-align: left;
+	text-indent: 8px;
+	border-radius:2px;
+}
+#container .con-tag a{
+	display: block;
+	color: #888;
+	border-radius:2px;
+}
+#container .con-tag a:hover{
+	background-color: #458b00;
+	color: #fff;
+}
+/*以上是container con-sidebar con-sidebox recommend con-tag的表单样式*/
+#container .con-figure{
+	padding: 10px 0;
+}
+#container .con-figure .fig-fig{
+	display: inline-block;
+	padding: 4px;
+	color: #666;
+}
+/*以上是container con-sidebar con-sidebox hot con-figure的表单样式*/
+#container .con-box{
+	padding: 10px 0;
+}
+#container .con-box a{
+	display: inline-block;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	margin: 2px 0;
+	background-color: #eee;
+	color: #888;
+	border-radius:2px;
+	text-align: left;
+	text-indent: 35px;
+}
+#container .con-box .trea1{
+    background: #eee url(../img/trea1.png) no-repeat 10px center;
+}
+#container .con-box .trea2{
+    background: #eee url(../img/trea2.png) no-repeat 10px center;
+}
+#container .con-box .trea3{
+    background: #eee url(../img/trea3.png) no-repeat 10px center;
+}
+#container .con-box .trea4{
+    background: #eee url(../img/trea4.png) no-repeat 10px center;
+}
+/*以上是container con-sidebar con-sidebox treasure con-box的表单样式*/
+#container .con-list{
+	width: 71%;
+	float: left;
+}
+#container .introduce h2{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 15px 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+#container .introduce{
+	color: #666;
+	font-size:20px;
+}
+#container .introduce p{
+	line-height: 2;
+	margin: 20px 0;
+}
+#container .introduce address{
+	line-height: 1.6;
+	margin: 20px 0;
+	font-style: normal;
+}
+#container .landscape h2{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 15px 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+#container .landscape{
+	color: #666;
+	font-size:20px;
+}
+#container .land-figure{
+	border: 1px solid #eee;
+	display: block;
+	padding: 4px;
+	border-radius:4px;
+	margin: 15px 5px 15px 0;
+	width: 32.6%;
+	text-align: left;
+	position: relative;
+	float: left;
+}
+#container .land-figure img{
+	border-radius:4px;
+}
+#container .land-figure figcaption{
+	text-align: center;
+	padding: 5px 0;
+}
+#container .list-more{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 20px;
+}
+/*以上是landscape.html 页面的表单样式*/
+#container .ticket{
+	color: #666;
+	font-size:20px;
+}
+#container .ticket h2{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px dashed #999;
+	padding: 0 0 15px 0;
+	font-size: 30px;
+	font-weight: normal;
+}
+#container .ticket .tic-type{
+	margin: 20px 0 10px 0;
+}
+#container .ticket .tic-type mark{
+	color: #fff;
+	background-color: #458b00;
+	padding: 5px 8px;
+	border-radius: 4px;
+	margin: 0 10px 0 16px;
+}
+#container .ticket .tic-left{
+	width: 43%;
+	display: inline-block;
+}
+#container .ticket .tic-right{
+	width: 43%;
+	display: inline-block;
+}
+#container .ticket .tic-button{
+	width: 9%;
+	display: inline-block;
+}
+#container .ticket .tic-submit{
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	border-radius: 4px;
+	background-color: #f60;
+	color: #fff;
+	font-size: 20px;
+	border:none;
+	cursor: pointer;
+	position: relative;
+	bottom:28px;
+}
+#container .ticket .form p{
+	line-height: 3;
+}
+#container .ticket .form input{
+	width: 250px;
+	height: 30px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	border-radius: 4px;
+	padding: 5px;
+	color: #666;
+	margin: 0 0 0 16px;
+	font-size: 18px;
+}
+/*以上是information.html页面 form标签 的表单样式*/
+#container .ticket .con-new{
+	margin: 20px 0 0 0;
+}
+#container .ticket .con-new ul{
+	margin: 20px 0 0 0;
+}
+#container .ticket .con-new li{
+	display: inline-block;
+	padding: 5px 10px;
+}
+#container .ticket .con-new li:first-child{
+	padding-left: 0;
+}
+#container .ticket .con-new li:nth-child(2){
+	background-color: #458b00;
+	color: #fff;
+	border-radius: 4px;
+}
+#container .ticket table{
+	margin: 20px 0 0 0;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	text-align: center;
+}
+#container .ticket th{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+}
+#container .ticket td{
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #ddd;
+}
+#container .ticket tr:nth-child(2n){
+	background-color: #FAFAFA;
+}
+#container .ticket tr:hover{
+	background-color: #eee;
+}
+#container .ticket .tic-price{
+	color: #f60;
+}
+#container .ticket .tic-more{
+	color: #666;
+}
+#container .ticket .tic-reserve{
+	display: inline-block;
+	width: 80px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 4px;
+	background-color: #f60;
+	color: #fff;
+	font-size: 20px;
+}
+/*以上是order.html 页面con-new的表单样式*/
+#container .list-info{
+	height: 45px;
+	line-height: 45px;
+	background-color: #eee;
+	margin: 0 0 20px 0;
+}
+/*以上是container con-list list-info 的表单样式*/
+#container .info-left{
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+}
+#container .info-left li{
+	display: inline-block;
+	width: 149px;
+	height: 43px;
+	line-height: 43px;
+	text-align: center;
+	margin: 0 0 0 2px;
+}
+#container .info-left a.left-slec,#container .info-left a:hover{
+	background-color: #fff;
+	border-top: 2px solid #458b00;
+}
+#container .info-left li a{
+	color: #666;
+	text-align:center;
+	display: block;
+}
+/*以上是container con-list list-info info-left 的表单样式*/
+#container .info-right{
+	display: inline-block;
+	float: right;
+	padding: 0 20px 0 0;
+	font-size: 16px;
+}
+#container .info-right li{
+	display: inline-block;
+	width: 60px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+}
+#container .info-right li a{
+	padding: 1px 8px;
+	color: #666;
+}
+#container .info-right a.right-slec,#container .info-right a:hover{
+	background-color: #458b00;
+	color: #fff;
+}
+/*以上是container con-list list-info info-right 的表单样式*/
+#container .list-tour{
+	margin: 0 0 20px 0;
+	border: 1px solid #ddd;
+	position: relative;
+	background-color: #fff;
+}
+#container .list-tour:after{
+	content: '.';
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+#container .list-tour img{
+	width: 45%;
+	float: left;
+}
+#container .list-tour figcaption{
+	width: 55%;
+	float: right;
+}
+#container .list-tour hgroup{
+	width: 300px;
+}
+#container .list-tour h2{
+	font-size:24px;
+	font-weight: normal;
+	color: #333;
+	padding: 10px 0 10px 25px;
+}
+#container .list-tour h3{
+	font-size:16px;
+	font-weight: normal;
+	line-height: 1.5;
+	color: #666;
+	padding: 10px 0 10px 25px;
+}
+#container .list-tour ol{
+	padding: 0 0 0 25px;
+	color: #666;
+	line-height: 2;	
+	font-size: 16px;
+}
+#container .list-tour mark{
+	background-color: #fff;
+	border: 1px solid #458b00;
+	border-radius:4px;	
+	color: #458b00;
+	padding:0 5px;
+}
+#container .list-tour .list-buy{
+	position: absolute;
+	top: 55px;
+	right: 30px;
+}
+#container .list-tour .buy-price{
+	color: #f60;
+	font-size: 20px;
+}
+#container .list-tour .buy-price strong{
+	font-size:36px;
+}
+#container .list-tour .buy-price s{
+	font-size: 16px;
+	color: #999;
+}
+#container .list-tour .buy-reserve{
+	margin: 10px 0 0 0;
+}
+#container .list-tour .buy-reserve a{
+	display: block;
+	width: 152px;
+	height: 40px;
+	line-height: 40px;
+	text-align:center;
+	font-size: 20px;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #f60;
+}
+#container .list-tour .list-type{
+	width: 90px;
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+	background-color: #59b200;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	border-bottom-right-radius: 4px;
+}
+#container .list-tour .list-disc{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 52px;
+	height: 52px;
+	background:url(../img/disc.png) no-repeat;
+}
+#container .list-tour .list-disc span{
+	display: block;
+	transform:rotate(45deg); 
+	width: 52px;
+	height: 52px;
+	padding: 5px 0 0 0;
+	text-indent: 7px;
+	font-size: 14px;
+	color: #ff7a4d;
+}
+#container .list-tour footer{
+	width: 55%;
+	height: 30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-indent: 25px;
+	color: #666;
+	background-color: #fafafa;
+	position: absolute;
+	bottom: 0;
+}
+#container .list-tour time{
+	color: #458b00;
+}
+/*以上是container con-list list-tour 的表单样式*/
+#footer{
+	background-color: #222;
+	clear: both;
+	position: relative;
+	top: 20px;
+}
+#footer .footer-top{
+	max-width: 1263px;
+	height: 280px;
+	margin: 0 auto;
+	color: red;
+	text-align: center;
+}
+#footer .block{
+	width: 33.3333333%;
+	/*height: 280px;*/
+	display:inline-block;
+	text-align: left;
+	color: #ccc;
+	vertical-align: top;
+	display: block;
+	float: left;
+}
+#footer .block h2{
+	font-size: 24px;
+	font-weight: normal;
+	padding: 20px 0 0 20px;
+}
+#footer .block hr{
+	width: 90%;
+	border: 1px dashed #333;
+}
+#footer .block ul{
+	font-size: 18px;
+	color: #777;
+	text-indent: 20px;
+	line-height: 2;
+}
+.sm-visible{        /*疑问1？此处的.sm-visible或写.version前面加上#footer都会导致响应式失效，即无论如何也不显示这个部分*/
+	display: none;	
+}
+#footer .version{    /*疑问2？此处的background-color是继承的#footer的#222，但是任何的浏览器按F12都不显示background-color的出处*/
+	color: #777;
+	text-align: center;
+	padding: 10px 0;
+}
+#footer .footer-bottom{
+/*	height:80px;
+	line-height: 80px;*/
+	padding: 15px 0;
+	text-align: center;
+	color: #777;
+	background-color: #000;
+	border-top:1px solid #444; 
+}
+/*媒体查询，参考部分Bootstrap 框架*/
+/*当页面大于1200px 时，大屏幕，主要是PC 端*/
+@media (min-width: 1440px) {
+	#header .header-link{
+		width: 55%;
+	}
+}
+@media (min-width: 1200px) and (max-width: 1440px){
+	#search .search-centre{
+		width: 40%;
+		height: 52.5px;
+		margin: -10px 0 0 -20%;
+	}
+	#search .search-search{
+		font-size: 22px;
+		height: 46.5px;
+	}
+	#search .search-button{
+		font-size: 22px;
+		height: 46.5px;
+	}
+	#tour .tour-centre h2{
+		font-size:42.5px;
+	}
+}
+/*在992 和1199 像素之间的屏幕里，中等屏幕，分辨率低的PC*/
+@media (min-width: 992px) and (max-width: 1199px) {
+	#search .search-centre{
+		width: 40%;
+		height: 55px;
+		margin: -10px 0 0 -20%;
+	}
+	#search .search-search{
+		font-size: 22px;
+		height: 49px;
+	}
+	#search .search-button{
+		font-size: 22px;
+		height: 49px;
+	}
+	#tour .tour-centre h2{
+		font-size:40px;
+	}
+	#hline hgroup{
+		left: 13%;
+	}
+	#hline h2{
+    	font-size: 36px;
+	}
+	#hline h3{
+	    font-size: 20px;
+	}
+	#container .con-sidebar{
+		display: none;
+	}
+	#container .con-list{
+		width: 100%;
+		padding: 0 20px;
+	}
+}
+/*在768 和991 像素之间的屏幕里，小屏幕，主要是PAD*/
+@media (min-width: 768px) and (max-width: 991px) {
+	#search .search-centre{
+		width: 50%;
+		height: 50px;
+		margin: -10px 0 0 -25%;
+	}
+	#search .search-search{
+		font-size: 18px;
+		height: 44px;
+	}
+	#search .search-button{
+		font-size: 18px;
+		height: 44px;
+	}
+	#tour .tour-centre h2{
+		font-size:35px;
+	}
+	#hline hgroup{
+		left: 13%;
+	}
+	#hline h2{
+    	font-size: 30px;
+	}
+	#hline h3{
+	    font-size: 16px;
+	}
+	#container .con-sidebar{
+		display: none;
+	}
+	#container .con-list{
+		width: 100%;
+		padding: 0 20px;
+	}
+	#container .introduce h2{
+		font-size: 28px;
+	}
+	#container .introduce p , #container .introduce address{
+		font-size: 18px;
+	}
+	#container .ticket .tic-left{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .tic-right{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .tic-button{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .form input{
+		width: 98%;
+		height: 35px;
+		margin: 0;
+	}
+	#container .ticket .form p{
+		line-height: 2;
+	}
+	#container .ticket .tic-submit{
+		display: block;
+		width: 30%;
+		height: auto;
+		line-height: 2;	
+		position: static;
+		margin: 10px auto;
+	}
+	#container .ticket,#container .ticket .form input,#container .ticket .tic-submit,#container .ticket .tic-reserve{
+		font-size: 16px;
+	}
+	#container .ticket h2{
+		font-size: 24px;
+	}
+	.md-hidden{
+		display: none;
+	}
+	#container .list-tour h2{
+		font-size: 22px;
+	}
+	#container .list-tour .list-buy{
+		position: absolute;
+		top: auto;
+		right: auto;
+		bottom: 0;
+		padding-left: 25px;
+	}
+	#container .list-tour .list-buy strong{
+		font-size: 30px;
+		padding-right:5%; 
+	}
+}
+/*在480 和767 像素之间的屏幕里，超小屏幕，主要是手机*/
+@media (min-width: 480px) and (max-width: 767px) {
+	#header, #header .header-centre, #header .header-link {
+		height: 45px;
+	}
+	#header .header-logo, .footer-top , #container .con-sidebar,.md-hidden{
+		display: none;
+	}
+	#header .header-link {
+		width: 100%;
+		line-height: 45px;
+	}
+	#search {
+		padding: 45px 0 0 0;
+	}
+	#search .search-centre{
+		width: 60%;
+		height: 45px;
+		margin: -10px 0 0 -30%;
+	}
+	#search .search-search{
+		font-size: 16px;
+		height: 39px;
+	}
+	#search .search-button{
+		font-size: 16px;
+		height: 39px;
+	}
+	.version{
+		display: block;
+	}
+	#tour .tour-centre h2{
+		font-size:30px;
+	}
+	#tour .tour-centre p{
+		font-size: 15px;
+	}
+	#tour .tour-figure{
+		width: 49.2%;
+	}
+	#hline hgroup{
+		left: 8%;
+	}
+	#hline{
+		padding: 45px 0 0 0;
+	}
+	#hline h2{
+    	font-size: 24px;
+	}
+	#hline h3{
+	    font-size: 14px;
+	}
+	#container .con-list{
+		width: 100%;
+		padding: 0 20px;
+	}
+	#container .introduce h2{
+		font-size: 25px;
+	}
+	#container .introduce p , #container .introduce address{
+		font-size: 15px;
+	}
+	#container .land-figure{
+		width: 48.8%;
+	}
+	#container .land-figure figcaption{
+		font-size: 18px;
+	}
+	#container .ticket .tic-left{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .tic-right{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .tic-button{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .form input{
+		width: 98%;
+		height: 32.5px;
+		margin: 0;
+	}
+	#container .ticket .form p{
+		line-height: 2;
+	}
+	#container .ticket .tic-submit{
+		display: block;
+		width: 30%;
+		height: auto;
+		line-height: 2;	
+		position: static;
+		margin: 10px auto;
+	}
+	#container .ticket,#container .ticket .form input,#container .ticket .tic-submit,#container .ticket .tic-reserve{
+		font-size: 14px;
+	}
+	#container .ticket h2{
+		font-size: 21px;
+	}
+	#container .ticket .tic-reserve{
+		width: auto;
+		height: auto;
+		line-height: 1;
+		padding: 8px 12px;
+	}
+	#container .list-tour hgroup{
+		width:97% 
+	}
+	#container .list-tour h2{
+		font-size: 20px;
+		padding: 5px 0 5px 15px;
+	}
+	#container .list-tour h3{
+		font-size: 14px;
+		padding: 5px 0 5px 15px;
+	}
+	#container .list-tour .list-disc{
+		width: 35px;
+		height: 35px;
+	}
+	#container .list-tour .list-disc span{
+		padding: 15px 5px 0 0 ;
+	    text-indent: 0px;
+	    font-size: 6px;
+	    position: relative;
+	    left: -6px;
+	    top: -2px;
+	}
+	#container .list-tour .list-buy{
+		position: absolute;
+		top: auto;
+		right: auto;
+		bottom: 0;
+		padding-left: 25px;
+	}
+	#container .list-tour .list-buy strong{
+		font-size: 24px;
+		padding-right:5%; 
+	}
+	#container .list-info{
+		height: 35px;
+		line-height: 35px;
+		margin: 0 0 20px 0;
+	}
+	/*以上是container con-list list-info 的表单样式*/
+	#container .info-left{
+		font-size: 16px;
+		}
+	#container .info-left li{
+		width: 100px;
+		height: 33px;
+		line-height: 33px;
+		margin: 0 0 0 2px;
+	}
+	/*以上是container con-list list-info info-left 的表单样式*/
+	#container .info-right{
+		padding: 0px;
+		font-size: 14px;
+	}
+	#container .info-right li{
+		width: 50px;
+		height: 35px;
+		line-height: 35px;
+	}
+	#container .list-tour .list-type{
+		width: 80px;
+		height: 20px;
+		line-height: 20px;
+		font-size: 14px;
+	}
+	#container .list-more{
+		width: 170px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 18px;
+	}
+}
+/*在小于480 像素的屏幕，微小屏幕，更低分辨率的手机*/
+@media (max-width: 479px) {
+	#header, #header .header-centre, #header .header-link {
+		height: 45px;
+	}
+	#header .header-logo, .xs-hidden, .footer-top , #container .con-sidebar , .md-hidden,.list-disc{
+		display: none;
+	}
+	#header .header-link {
+		width: 100%;
+		line-height: 45px;
+	}
+	#header .header-link li {
+		width: 25%;
+	}
+	#search {
+		padding: 45px 0 0 0;
+	}
+	#search .search-centre{
+		width: 70%;
+		height: 40px;
+		margin: -10px 0 0 -35%;
+	}
+	#search .search-search{
+		font-size: 14px;
+		height: 34px;
+	}
+	#search .search-button{
+		font-size: 14px;
+		height: 34px;
+	}
+	.version{
+		display: block;
+		font-size: 14px;
+	}
+	#footer .footer-bottom{
+		font-size: 13px;
+	}
+	#tour .tour-centre h2{
+		font-size:26px;
+	}
+	#tour .tour-centre p{
+		font-size: 14px;
+	}
+	#tour .tour-figure{
+		width: 99.2%;
+	}
+	#hline hgroup{
+		left: 8%;
+	}
+	#hline{
+		padding: 45px 0 0 0;
+	}
+	#hline h2{
+    	font-size: 18px;
+	}
+	#hline h3{
+	    font-size: 12px;
+	}
+	#container .con-list{
+		width: 100%;
+		padding: 0 20px;
+	}
+	#container .introduce h2{
+		font-size: 20px;
+	}
+	#container .introduce p , #container .introduce address{
+		font-size: 14px;
+	}
+	#container .land-figure{
+		width: 99%;
+	}
+	#container .land-figure figcaption{
+		font-size: 16px;
+	}
+	#container .ticket .tic-left{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .tic-right{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .tic-button{
+		width: 98%;
+		display: block;
+	}
+	#container .ticket .form input{
+		width: 98%;
+		height: 30px;
+		margin: 0;
+	}
+	#container .ticket .form p{
+		line-height: 2;
+	}
+	#container .ticket .tic-submit{
+		display: block;
+		width: 30%;
+		height: auto;
+		line-height: 2;	
+		position: static;
+		margin: 10px auto;
+	}
+	#container .ticket,#container .ticket .form input,#container .ticket .tic-submit,#container .ticket .tic-reserve{
+		font-size: 12px;
+	}
+	#container .ticket h2{
+		font-size: 18px;
+	}
+	#container .ticket .tic-reserve{
+		width: auto;
+		height: auto;
+		line-height: 1;
+		padding:6px 8px;
+	}
+	/*#container .list-tour h2{
+		font-size: 22px;
+	}*/
+	#container .list-tour .list-buy{
+		position: absolute;
+		top: auto;
+		right: auto;
+		bottom: 0;
+		padding-left: 25px;
+	}
+	#container .list-tour .list-buy strong{
+		font-size: 30px;
+		padding-right:5%; 
+	}
+		#container .list-info{
+		height: 35px;
+		line-height: 35px;
+		margin: 0 0 20px 0;
+	}
+	/*以上是container con-list list-info 的表单样式*/
+	#container .info-left{
+		font-size: 16px;
+		}
+	#container .info-left li{
+		width: 100px;
+		height: 33px;
+		line-height: 33px;
+		margin: 0 0 0 2px;
+	}
+	/*以上是container con-list list-info info-left 的表单样式*/
+	#container .info-right{
+		padding: 0px;
+		font-size: 14px;
+	}
+	#container .info-right li{
+		width: 50px;
+		height: 35px;
+		line-height: 35px;
+	}
+	#container .list-tour hgroup{
+		width:97% 
+	}
+	#container .list-tour h2{
+		font-size: 16px;
+	    height: 15px;
+	    padding: 5px 0 5px 15px;
+	    line-height: 15px;
+	}
+	#container .list-tour h3{
+		height: 15px;
+		font-size: 12px;
+		padding: 5px 0 5px 15px;
+		overflow: hidden;
+	}
+	#container .list-tour .list-buy{
+		position: absolute;
+		top: auto;
+		right: auto;
+		bottom: 0;
+		padding-left: 15px;
+	}
+	#container .list-tour .list-buy strong{
+		font-size: 16px;
+		padding-right:5%; 
+	}
+	#container .list-tour .list-buy s {
+		font-size: 10px;
+	}
+	#container .list-info{
+		height: 30px;
+		line-height: 30px;
+		margin: 0 0 15px 0;
+	}
+	/*以上是container con-list list-info 的表单样式*/
+	#container .info-left{
+		font-size: 14px;
+		}
+	#container .info-left li{
+		width: 60px;
+		height: 28px;
+		line-height: 28px;
+		margin: 0 0 0 2px;
+	}
+	/*以上是container con-list list-info info-left 的表单样式*/
+	#container .info-right{
+		padding: 0px;
+		font-size: 12px;
+	}
+	#container .info-right li{
+		width: 40px;
+		height: 30px;
+		line-height: 30px;
+	}
+	#container .list-tour .list-type{
+		width: 65px;
+		height: 16px;
+		line-height: 16px;
+		font-size: 12px;
+	}
+		#container .list-more{
+		width: 140px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 16px;
+	}
+}
